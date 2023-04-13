@@ -1,9 +1,4 @@
-# Fabric Example Mod
+# TutorialMod
 
-## Setup
-
-For setup instructions please see the [fabric wiki page](https://fabricmc.net/wiki/tutorial:setup) that relates to the IDE that you are using.
-
-## License
-
-This template is available under the CC0 license. Feel free to learn from it and incorporate it in your own projects.
+## Notes
+* sometimes if something doesn't work or load correctly going into the java projects menu in the explorer and clicking on the three dots and then clickning clean workspace fixes it

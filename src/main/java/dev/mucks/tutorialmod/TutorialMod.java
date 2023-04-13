@@ -4,6 +4,7 @@ import net.fabricmc.api.ModInitializer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import dev.mucks.tutorialmod.block.ModBlocks;
 import dev.mucks.tutorialmod.item.ModItemGroup;
 import dev.mucks.tutorialmod.item.ModItems;
 
@@ -21,7 +22,9 @@ public class TutorialMod implements ModInitializer {
 		// However, some things (like resources) may still be uninitialized.
 		// Proceed with mild caution.
 		ModItemGroup.registerItemGroups();
+
 		ModItems.registerModItems();
+		ModBlocks.registerModBlocks();
 
 		LOGGER.info("Hello Fabric world!");
 	}
