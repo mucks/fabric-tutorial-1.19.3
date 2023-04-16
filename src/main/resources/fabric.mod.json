@@ -20,6 +20,9 @@
     ],
     "client": [
       "dev.mucks.tutorialmod.TutorialModClient"
+    ],
+    "fabric-datagen": [
+      "dev.mucks.tutorialmod.TutorialModDataGenerator"
     ]
   },
   "mixins": [
