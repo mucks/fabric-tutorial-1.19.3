@@ -7,6 +7,7 @@ import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
 import net.minecraft.data.client.BlockStateModelGenerator;
 import net.minecraft.data.client.ItemModelGenerator;
 import net.minecraft.data.client.Models;
+import net.minecraft.data.client.BlockStateModelGenerator.TintType;
 
 public class ModModelProvider extends FabricModelProvider {
 
@@ -19,6 +20,17 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.CITRINE_BLOCK);
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.CITRINE_ORE);
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.DEEPSLATE_CITRINE_ORE);
+
+        blockStateModelGenerator.registerLog(ModBlocks.RED_MAPLE_LOG).log(ModBlocks.RED_MAPLE_LOG)
+                .log(ModBlocks.RED_MAPLE_WOOD);
+        blockStateModelGenerator.registerLog(ModBlocks.STRIPPED_RED_MAPLE_LOG).log(ModBlocks.STRIPPED_RED_MAPLE_LOG)
+                .log(ModBlocks.STRIPPED_RED_MAPLE_WOOD);
+
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.RED_MAPLE_PLANKS);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.RED_MAPLE_LEAVES);
+
+        blockStateModelGenerator.registerTintableCrossBlockState(ModBlocks.RED_MAPLE_SAPLING, TintType.NOT_TINTED);
+
     }
 
     @Override

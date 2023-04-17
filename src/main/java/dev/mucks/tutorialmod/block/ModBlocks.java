@@ -2,12 +2,17 @@ package dev.mucks.tutorialmod.block;
 
 import dev.mucks.tutorialmod.TutorialMod;
 import dev.mucks.tutorialmod.item.ModItemGroup;
+import dev.mucks.tutorialmod.world.tree.RedMapleSaplingGenerator;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Block;
+import net.minecraft.block.Blocks;
 import net.minecraft.block.ExperienceDroppingBlock;
+import net.minecraft.block.LeavesBlock;
 import net.minecraft.block.Material;
+import net.minecraft.block.PillarBlock;
+import net.minecraft.block.SaplingBlock;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
@@ -31,6 +36,37 @@ public class ModBlocks {
             new ExperienceDroppingBlock(
                     FabricBlockSettings.of(Material.STONE).strength(4.0f).requiresTool(),
                     UniformIntProvider.create(2, 6)),
+            ModItemGroup.CITRINE);
+
+    // Read Maple
+
+    public static final Block RED_MAPLE_LOG = registerBlock("red_maple_log",
+            new PillarBlock(FabricBlockSettings.copyOf(Blocks.OAK_LOG).strength(4.0f).requiresTool()),
+            ModItemGroup.CITRINE);
+
+    public static final Block RED_MAPLE_WOOD = registerBlock("red_maple_wood",
+            new PillarBlock(FabricBlockSettings.copyOf(Blocks.OAK_WOOD).strength(4.0f).requiresTool()),
+            ModItemGroup.CITRINE);
+
+    public static final Block STRIPPED_RED_MAPLE_LOG = registerBlock("stripped_red_maple_log",
+            new PillarBlock(FabricBlockSettings.copyOf(Blocks.STRIPPED_OAK_LOG).strength(4.0f).requiresTool()),
+            ModItemGroup.CITRINE);
+
+    public static final Block STRIPPED_RED_MAPLE_WOOD = registerBlock("stripped_red_maple_wood",
+            new PillarBlock(FabricBlockSettings.copyOf(Blocks.STRIPPED_OAK_WOOD).strength(4.0f).requiresTool()),
+            ModItemGroup.CITRINE);
+
+    public static final Block RED_MAPLE_PLANKS = registerBlock("red_maple_planks",
+            new Block(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS).strength(4.0f).requiresTool()),
+            ModItemGroup.CITRINE);
+
+    public static final Block RED_MAPLE_LEAVES = registerBlock("red_maple_leaves",
+            new LeavesBlock(FabricBlockSettings.copyOf(Blocks.OAK_LEAVES).strength(4.0f).requiresTool()),
+            ModItemGroup.CITRINE);
+
+    public static final Block RED_MAPLE_SAPLING = registerBlock("red_maple_sapling",
+            new SaplingBlock(new RedMapleSaplingGenerator(),
+                    FabricBlockSettings.copyOf(Blocks.OAK_SAPLING).strength(4.0f).requiresTool()),
             ModItemGroup.CITRINE);
 
     private static Block registerBlock(String name, Block block, ItemGroup group) {

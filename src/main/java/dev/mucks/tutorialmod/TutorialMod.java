@@ -1,12 +1,16 @@
 package dev.mucks.tutorialmod;
 
 import net.fabricmc.api.ModInitializer;
+import net.fabricmc.fabric.api.registry.StrippableBlockRegistry;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import dev.mucks.tutorialmod.block.ModBlocks;
+import dev.mucks.tutorialmod.block.ModFlammableBlockRegistry;
 import dev.mucks.tutorialmod.item.ModItemGroup;
 import dev.mucks.tutorialmod.item.ModItems;
+import dev.mucks.tutorialmod.world.gen.ModWorldGeneration;
 
 public class TutorialMod implements ModInitializer {
 	// This logger is used to write text to the console and the log file.
@@ -26,6 +30,12 @@ public class TutorialMod implements ModInitializer {
 		ModItems.registerModItems();
 		ModBlocks.registerModBlocks();
 
-		LOGGER.info("Hello Fabric world!");
+		ModWorldGeneration.generateModWorldGen();
+
+		ModFlammableBlockRegistry.registerFlammableBlocks();
+
+		StrippableBlockRegistry.register(ModBlocks.RED_MAPLE_LOG, ModBlocks.STRIPPED_RED_MAPLE_LOG);
+		StrippableBlockRegistry.register(ModBlocks.RED_MAPLE_WOOD, ModBlocks.STRIPPED_RED_MAPLE_WOOD);
+
 	}
 }
