@@ -1,4 +1,4 @@
-// 1.19.4	2023-04-17T18:06:43.25568821	Tutorial Mod/Model Definitions
+// 1.19.4	2023-04-18T00:36:28.277291594	Tutorial Mod/Model Definitions
 dcc8f3e207d4b9799b13aa25ffdf66517f357c0f assets/tutorialmod/models/item/citrine.json
 f716d04176d49057fa0b59043e55438e463ecec0 assets/tutorialmod/models/block/stripped_red_maple_wood.json
 16769e586c29d1d77f6429397f9ac101bfd02ccc assets/tutorialmod/models/item/red_maple_sapling.json
@@ -27,8 +27,8 @@ b0b62ff437694e8e9d233c55e693c60dd05091e7 assets/tutorialmod/models/item/citrine_
 50c1ddaccc93cbc761d4cf9cb7aeb156307123f2 assets/tutorialmod/models/block/stripped_red_maple_wood_horizontal.json
 f716d04176d49057fa0b59043e55438e463ecec0 assets/tutorialmod/models/block/stripped_red_maple_log.json
 bf9544de25a918b3b73a54c868e563d3f0d1babf assets/tutorialmod/models/item/red_maple_log.json
-6bc1c4bd7fb216b333b9b066aff35ce9c2984bf2 assets/tutorialmod/models/block/red_maple_log.json
 6bc1c4bd7fb216b333b9b066aff35ce9c2984bf2 assets/tutorialmod/models/block/red_maple_wood.json
+6bc1c4bd7fb216b333b9b066aff35ce9c2984bf2 assets/tutorialmod/models/block/red_maple_log.json
 b6f3353e82772b125681867a1408e3c3df76fd37 assets/tutorialmod/models/block/red_maple_wood_horizontal.json
 f23b96bf875fc2dc0fdaa8fff458aa773911a657 assets/tutorialmod/blockstates/citrine_block.json
 3f1c7c6aba7969013cae30b443a417161afed8d6 assets/tutorialmod/models/item/red_maple_leaves.json
