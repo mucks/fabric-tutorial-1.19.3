@@ -3,12 +3,14 @@ package dev.mucks.tutorialmod;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
 import net.fabricmc.fabric.api.registry.StrippableBlockRegistry;
+import software.bernie.geckolib.GeckoLib;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import dev.mucks.tutorialmod.block.ModBlocks;
 import dev.mucks.tutorialmod.block.ModFlammableBlockRegistry;
+import dev.mucks.tutorialmod.block.entity.ModBlockEntities;
 import dev.mucks.tutorialmod.entity.ModEntities;
 import dev.mucks.tutorialmod.entity.custom.TigerEntity;
 import dev.mucks.tutorialmod.item.ModItemGroup;
@@ -25,15 +27,14 @@ public class TutorialMod implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
-		// This code runs as soon as Minecraft is in a mod-load-ready state.
-		// However, some things (like resources) may still be uninitialized.
-		// Proceed with mild caution.
 		ModItemGroup.registerItemGroups();
-
 		ModItems.registerModItems();
 		ModBlocks.registerModBlocks();
-
 		ModWorldGeneration.generateModWorldGen();
+
+		ModBlockEntities.registerAllBlockEntities();
+
+		GeckoLib.initialize();
 
 		ModFlammableBlockRegistry.registerFlammableBlocks();
 
